@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.container{
+  height:100vh;
+  width:100vw;
+  display: grid;
+  margin: auto;
+  opacity: 1.0;
+  /* background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); */
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+.signup-img{
+  height:100%;
+  width:100%;
+  border-radius: 25px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+  /* object-fit: cover; */
+  object-position: center;
+}
+.signupcontainer{
+  width:1000px;
+  height:800px;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  display: grid;
+  margin: auto;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+}
+.signupimgcontainer{
+  width:500px;
+  height:800px;
+  opacity: 0.9;
+}
+.signupinput{
+width:300px;
+height:600px;
+display: grid;
+margin: auto;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+opacity: 0.8;
+}
+.inpdetails{
+display: flex;
+flex-direction: column;
+margin: auto;
+gap:15px;
+font-weight: bold;
+margin-bottom:100px;;
+}
+.inpdetails button{
+  background-color: #7b96ec;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.inpdetails button:hover{
+  border: 2px solid black;
+}
+.links{
+  margin-top: 10px;
+  font-weight: 12px;
+}
+input{
+padding: 15px;
+border-radius: 1px solid black;
+border-style: solid solid solid solid;
+border: 1px solid #a7bcff;
+background-color: #B9E9FC00;
+&::placeholder{
+  color: black;
+  font-weight: bold;
+}
+}
+.title-img{
+  height:100px;
+  width:200px;
+}
+.titleImg{
+  width:200px;
+  height:100px;
+  display:grid;
+  margin:auto;
+}
+.titleInput{
+  width:250px;
+  align-items: center;
+  justify-content: center;
+  display:grid;
+  margin:auto;
+  font-family: 'Times New Roman', Times, serif;
+}
+.loginInput{
+width:500px;
+height:600px;
+display: grid;
+margin: auto;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+opacity: 0.8;
+top:30px;
+}
+.loginImg{
+  width:150px;
+  height:150px;
+  display:grid;
+  margin:auto;
+  margin-left: 10px;
+}
+.login-img{
+  height:150px;
+  width:200px;
+}
+.homeContainer{
+  height:100vh;
+  width:100vw;
+  display:flex;
+}
+.searchBar{
+  width:300px;
+  height:957px;
+  background-color: rgb(245, 249, 250)
+}
+.homeLogo{
+  display:flex;
+  gap:10px;
+  background-color: rgb(245, 249, 250);
+}
+.searchBarField{
+  padding: 15px 10px 10px 10px;
+}
+.searchBarField .ant-input-group .ant-input{
+  background-color: rgb(235, 240, 245);
+}
+.user{
+  padding-left: 10px;
+  padding-top: 10px;
+  display: flex;
+}
+.userimage{
+  height:80px;
+  position: relative;
+}
+.userdetails{
+  margin-left: 10px;
+  margin-top: 2px;
+  font-weight: lighter;
+  font-size: 22px;
+  height:60px;
+}
+.userDisplay{
+  display: grid;
+  padding-top: 0px;
+  height:600px;
+}
+.Avatar{
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.navBar{
+  justify-content: center;
+  position: fixed;
+  width:300px;
+  top: 0;
+  transform: translate(-160px);
+  gap:5px;
+  left: 45vw;
+  border-bottom-left-radius: 25px;
+}
+.comments{
+  position: absolute;
+  right:0;
+  background-color: rgb(235, 240, 245);
+  width:500px;
+  height:957px;
+}
+.posts{
+  position: absolute;
+  width: 50vw;
+  transform: translate(20vw);
+  right: 50vw;
+  top:100px;
+  height:800px;
+  /* width:500px; */
+}
