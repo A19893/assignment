@@ -1,44 +1,48 @@
-import React from "react";
-
+import React,{useState} from "react";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 const Signup = () => {
+  const[name,setname]=useState('');
+  const[password,setPassword]=useState('');
+  const navigate=useNavigate();
+  const clickHandler=async(e)=>{
+    e.preventDefault();
+    try{
+      const res=await axios.post("http://localhost:5000/addUser",{name:name,password:password,id:Date.now()})
+      if(res.status===200){
+        navigate("/home")
+      }
+      
+    }
+    catch(err){
+      console.log(err)
+      alert(err.response.data)
+    }
+  }
   return (
-    <>
-      <form className="inputs">
-        Username{" "}
-        <Input
-          size="large"
-          style={{ width: 300 }}
-          placeholder="Enter username"
-          onChange={(e) => nameHandler(e)}
+    <div className="container">
+    <div className="signupcontainer">
+      <div className="signupimgcontainer">
+        <img className="signup-img"src="https://img.freepik.com/premium-vector/happy-people-use-mobile-smartphone_165488-4717.jpg?w=1380" alt="misssing"/>
+      </div>
+      <div className="signupinput">
+        <div className="inpdetails">
+        <input
+          type="name"
+          placeholder=" Name.."
+          onChange={(e) => setname(e.target.value)}
         />
-        <br />
-        <br />
-        Password{" "}
-        <Space direction="vertical">
-          <Input.Password
-            size="large"
-            placeholder="Enter password"
-            onChange={(e) => passwordHandler(e)}
-          />
-        </Space>
-        <span>{credential ? <h4>Please enter details</h4> : ""}</span>
-        <br />
-        <br />
-        <Radio.Group
-          options={options}
-          onChange={onChange3}
-          value={value3}
-          optionType="button"
+        <input
+          type="password"
+          placeholder=" Password"
+          onChange={(e) => setPassword(e.target.value)}
         />
-        <br />
-        <br />
-        <Space wrap>
-          <Button type="primary" id="primary" onClick={(e) => clickHandler()}>
-            SignUp
-          </Button>
-        </Space>
-      </form>
-    </>
+        <button onClick={clickHandler}>Sign In</button>
+        <Link to="/login" className="links">Already a Registered User?</Link>
+        </div>
+      </div>
+    </div>
+  </div>
   );
 };
 
