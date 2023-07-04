@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+     "name":"Yash",
+     "gender":"Male"
+    },
+    {
+        "name":"Drishti",
+        "gender":"Female"
+    }
+  ]
+}
