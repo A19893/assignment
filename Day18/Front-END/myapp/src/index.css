@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width:100vw;
+  background-image: url('https://img.freepik.com/free-photo/breathtaking-view-beautiful-cloudy-colorful-ceiling-ocean-shore_181624-26256.jpg?w=1380&t=st=1686818927~exp=1686819527~hmac=e6f3d293349e8d71e9a7bc98d84e55c22ffc9b63036b89875115c7b7d9e8dda5');
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:30px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.container{
+  height:100vh;
+  width:100vw;
+  display: grid;
+  margin: auto;
+  opacity: 1.0;
+  /* background-color: #a7bcff; */
+  /* background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); */
+}
+.signup-img{
+  height:100%;
+  width:100%;
+  border-radius: 25px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+  object-fit: cover;
+  object-position: center;
+}
+.signupcontainer{
+  width:800px;
+  height:600px;
+  /* border: 2px solid black; */
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  display: grid;
+  margin: auto;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+}
+.signupimgcontainer{
+  width:500px;
+  height:600px;
+  opacity: 0.9;
+}
+.signupinput{
+width:300px;
+height:600px;
+display: grid;
+margin: auto;
+/* background-color: #B9E9FC; */
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+opacity: 0.8;
+}
+.inpdetails{
+display: flex;
+flex-direction: column;
+margin: auto;
+gap:15px;
+font-weight: bold;
+}
+.inpdetails button{
+  background-color: #7b96ec;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.inpdetails button:hover{
+  border: 2px solid black;
+}
+.links{
+  margin-top: 10px;
+  font-weight: 12px;
+}
+input{
+padding: 15px;
+border-style: none none solid none;
+border-bottom: 1px solid #a7bcff;
+background-color: #B9E9FC00;
+&::placeholder{
+  color: black;
+  font-weight: bold;
+}
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.layout{
+  background-image: url('./Components/background.png');
+  /* background-image: linear-gradient(to bottom right, #0079ff, #30a2ff); */
+  transition: 1.0s;
+  height:500px;
+  width:800px;
+  display:grid;
+  border-radius:25px;
+  align-items: center;
+  margin: auto;
+}
+.content{
+  transition: 1.0s;
+  /* background-image: linear-gradient(to bottom right, #0079ff, #30a2ff); */
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: transparent;
+}
+#temperature{
+  margin-left: 20px;
+  margin-bottom:30px;
+  font-size: 55px;
+}
+.icon{
+  text-align:right;
+}
+#tempicon{
+  width:200px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+#weathericon{
+  width: 200px;
+  height: 120px;
+  margin-left: 600px;
+}
+#Search{
+  position: absolute;
+  top:1rem;
+  width:250px;
+  margin-left: 20px;
+  margin-top:10px;
+}
+.logout{
+  cursor:pointer;
+  position: absolute;
+  top:0;
+  right:0;
+  margin-right: 20px;
+  /* background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); */
+  background-color: white;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  height:30px;
+  width:70px;
+  margin-top: 10px;
+  padding:5px 5px 5px 5px;
+  padding-left: 10px;
+  border-radius: 15px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+.layout{
+  position: relative;
+}
+.record{
+  background-color: whitesmoke;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  width:300px;
+  height:300px;
+  display: grid;
+  margin: auto;
+  border-radius: 25px;
+}
+.record h1{
+  margin:auto;
+  display: grid;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  text-decoration:wavy;
+}
