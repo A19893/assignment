@@ -11,6 +11,7 @@ client.connect(DB).then((database)=>{
 dbInstance=database.db("Day19");
 UserInstance=dbInstance.collection('Users');
 productInstance=dbInstance.collection('Products');
+CartInstance=dbInstance.collection('Cart-Items')
 console.log("connected")
 }).catch(err=>{
     console.log('Not Connected')
@@ -75,6 +76,26 @@ app.post('/checkUser',(req,res)=>{
         }
         }
     })
+})
+app.post('/addToCart',(req,res)=>{
+    let obj={item:req.body.item,purchasedBy:req.body.userId};
+    CartInstance.insertOne(obj).then((result)=>{
+      console.log(result);
+    }).catch(err=>{
+        console.log(err);
+    })
+     res.sendStatus(200);
+})
+app.get("/getCartItems",(req,res)=>{
+    CartInstance.find().toArray().then((result)=>{
+        res.status(200).json(result);
+    }).catch((err)=>{
+        console.log(err);
+    })
+})
+app.post('/placeOrder',(req,res)=>{
+    console.log("placeorder",req.body);
+    res.send("hvhvasc")
 })
 app.listen(5000,function(err){
 if(err)
